@@ -57,7 +57,7 @@ nuxt-app/
 │   ├── dashboard/       # MockCard, Mock1Status, Mock2Performa, Mock3Seragam
 │   └── features/        # MockRating, MockOutlet, MockItem, MockUlasan
 ├── composables/
-│   └── useConstants.ts  # WA_HREF = wa.me/6287824622895
+│   └── useConstants.ts  # WA_HREF = wa.me/6281118867198
 ├── assets/
 │   └── css/
 │       └── styles.css   # Design tokens (CSS variables) + base styles
@@ -158,7 +158,7 @@ chmod +x deploy.sh
 
 ## 📞 Konfigurasi
 
-Semua CTA mengarah ke WhatsApp: **`https://wa.me/6287824622895`**
+Semua CTA mengarah ke WhatsApp: **`https://wa.me/6281118867198`**
 
 Untuk ganti, edit `composables/useConstants.ts`:
 

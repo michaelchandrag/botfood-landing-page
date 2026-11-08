@@ -9,6 +9,12 @@ export default defineNuxtConfig({
     preset: 'static',
   },
 
+  // Icons are used without the folder prefix (<IconArrow />, not <IconsIconArrow />)
+  components: [
+    { path: '~/components/icons', pathPrefix: false },
+    '~/components',
+  ],
+
   css: ['~/assets/css/styles.css'],
 
   app: {

@@ -71,7 +71,18 @@ html, body {
   scroll-behavior: smooth;
 }
 
-body { overflow-x: hidden; }
+html, body { overflow-x: hidden; }
+@supports (overflow: clip) {
+  html, body { overflow-x: clip; }
+}
+
+/* Grid/flex children must be allowed to shrink below their content width,
+   otherwise wide mockups push the page wider than the phone screen. */
+.dash-row > *,
+.feature-row > *,
+.hero-grid > * { min-width: 0; }
+
+img, svg, video { max-width: 100%; }
 
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; border: 0; background: 0; padding: 0; color: inherit; }

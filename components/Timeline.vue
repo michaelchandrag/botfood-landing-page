@@ -203,7 +203,7 @@ const steps = [
 <style scoped>
 @media (max-width: 820px) {
   .timeline-card { grid-template-columns: 1fr !important; gap: 16px !important; }
-  .timeline-visual { width: 100% !important; height: 130px !important; }
+  .timeline-visual { width: 100% !important; height: auto !important; min-height: 130px; display: flex; }
 }
 @media (max-width: 720px) {
   .timeline-step { grid-template-columns: 44px 1fr !important; gap: 14px !important; }
