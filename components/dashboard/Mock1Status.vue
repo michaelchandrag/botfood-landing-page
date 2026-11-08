@@ -7,17 +7,18 @@ const platforms = [
 </script>
 
 <template>
-  <MockCard glow="var(--danger)">
+  <DashboardMockCard glow="var(--danger)">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
       <div style="font-size: 13px; font-weight: 800; color: var(--ink-2);">
         Laporan Terkini
       </div>
     </div>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+    <div class="status-grid" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;">
       <div
         v-for="p in platforms"
         :key="p.id"
+        class="status-card"
         :style="{
           padding: '14px',
           border: p.alert ? '2px solid var(--danger)' : '1px solid var(--border)',
@@ -27,7 +28,7 @@ const platforms = [
           boxShadow: p.alert ? '0 0 0 4px rgba(214,69,69,0.12)' : 'none',
         }"
       >
-        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+        <div class="status-card-head" style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
           <PlatformIcon :name="p.id" :size="20" />
           <div style="font-size: 13px; font-weight: 800;">{{ p.name }}</div>
         </div>
@@ -42,5 +43,14 @@ const platforms = [
         </div>
       </div>
     </div>
-  </MockCard>
+  </DashboardMockCard>
 </template>
+
+<style scoped>
+@media (max-width: 480px) {
+  .status-grid { gap: 6px !important; }
+  .status-card { padding: 10px 8px !important; }
+  .status-card-head { flex-direction: column; align-items: flex-start !important; gap: 4px !important; }
+  .status-card-head > div { font-size: 12px !important; }
+}
+</style>

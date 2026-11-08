@@ -125,7 +125,7 @@ const features = [
 <style scoped>
 @media (max-width: 900px) {
   .feature-row {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: minmax(0, 1fr) !important;
     gap: 32px !important;
     direction: ltr !important;
   }

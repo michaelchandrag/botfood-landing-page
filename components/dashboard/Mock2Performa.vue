@@ -9,7 +9,7 @@ const outlets = [
 </script>
 
 <template>
-  <MockCard glow="var(--brand)">
+  <DashboardMockCard glow="var(--brand)">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
       <div>
         <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800; color: #e6a411; margin-bottom: 2px;">
@@ -61,5 +61,5 @@ const outlets = [
         </div>
       </div>
     </div>
-  </MockCard>
+  </DashboardMockCard>
 </template>

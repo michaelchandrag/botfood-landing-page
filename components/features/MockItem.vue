@@ -133,7 +133,7 @@ const summaryChips = [
       </span>
 
       <!-- Price -->
-      <div style="text-align: right; min-width: 78px; flex-shrink: 0; font-family: var(--font-mono); font-variant-numeric: tabular-nums;">
+      <div class="mock-item-price" style="text-align: right; min-width: 78px; flex-shrink: 0; font-family: var(--font-mono); font-variant-numeric: tabular-nums;">
         <template v-if="item.sale">
           <div style="font-size: 9px; color: var(--ink-3); text-decoration: line-through;">
             {{ fmtPrice(item.price) }}
@@ -155,10 +155,17 @@ const summaryChips = [
       </div>
 
       <!-- Last active -->
-      <div style="font-size: 9px; color: var(--ink-3); font-family: var(--font-mono); text-align: right; min-width: 76px; white-space: nowrap; flex-shrink: 0;">
+      <div class="mock-item-last" style="font-size: 9px; color: var(--ink-3); font-family: var(--font-mono); text-align: right; min-width: 76px; white-space: nowrap; flex-shrink: 0;">
         <span v-if="item.last === '—'">—</span>
         <span v-else style="color: #c53131; font-weight: 700;">{{ item.last }}</span>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+@media (max-width: 480px) {
+  .mock-item-last { display: none !important; }
+  .mock-item-price { min-width: 0 !important; }
+}
+</style>

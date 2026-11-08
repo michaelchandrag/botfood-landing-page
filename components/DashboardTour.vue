@@ -130,7 +130,7 @@ const badgeBg = (color) => {
 <style scoped>
 @media (max-width: 900px) {
   .dash-row {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: minmax(0, 1fr) !important;
     gap: 28px !important;
     direction: ltr !important;
   }

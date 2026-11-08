@@ -11,7 +11,7 @@ const pillFg = (s) => s === 'aktif' ? '#137f2b' : '#c53131'
 </script>
 
 <template>
-  <MockCard glow="#e6a411">
+  <DashboardMockCard glow="#e6a411">
     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
       <div style="width: 34px; height: 34px; border-radius: 10px; background: rgba(230, 164, 17, 0.14); color: #a67a0b; display: flex; align-items: center; justify-content: center;">
         <IconAlert :size="18" />
@@ -69,5 +69,5 @@ const pillFg = (s) => s === 'aktif' ? '#137f2b' : '#c53131'
         </span>
       </div>
     </div>
-  </MockCard>
+  </DashboardMockCard>
 </template>
